@@ -38,15 +38,12 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a survey to the flight it is about" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> <http://www.w3.org/2000/01/rdf-schema#label> "has date" .
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Related to the date on which the flight occurred." .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#label> "has flight date" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_country
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -107,16 +104,14 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the title of the review" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title> <http://www.w3.org/2000/01/rdf-schema#label> "has review title" .
 # 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#comment> "A class has a string text value" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> <http://www.w3.org/2000/01/rdf-schema#label> "has text value" .
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to the date that the survey was submited" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> <http://www.w3.org/2000/01/rdf-schema#label> "has survey date" .
 # 
 # 
 # 
@@ -290,48 +285,39 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> "2004-03-12T13:20:00" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/2000/01/rdf-schema#comment> "The aircraft that pep mention in the survey" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing 737 900" .
+# 
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the city of Pep destination" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> <http://www.w3.org/2000/01/rdf-schema#label> "London" .
+# 
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the city of Pep origin" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> <http://www.w3.org/2000/01/rdf-schema#label> "Barcelona" .
+# 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_country> "Spain" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> "Pep Garcia" .
 # 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> "Boeing 737 900" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "The aircraft that pep mention in the survey" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Aircraft" .
-# 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> "Ryanair" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> <http://www.w3.org/2000/01/rdf-schema#comment> "The airline that pep mention in the survey" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Airline" .
-# 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> "London" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the city of Pep destination" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Destination" .
-# 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value> "Barcelona" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the city of Pep origin" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Origin" .
-# 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Overall_Experience> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_rating_value> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating> <http://www.w3.org/2000/01/rdf-schema#comment> "The rating that Pep gave to the overall experience" .
@@ -340,35 +326,42 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Review> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date> "2004-04-12T13:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_text> "The flight was comfortable and the staff was friendly. The food was delicious and the entertainment options were great. The wifi worked well and the overall experience was positive." .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title> "Has been a good experience" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> "2004-04-12T13:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.w3.org/2000/01/rdf-schema#comment> "The story of Pep's experience" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Review" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Economy_Class> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of seat that Pep had in the flight" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Seat Type" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> <http://www.w3.org/2000/01/rdf-schema#label> "The type of seat that Pep had in the flight" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verified> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date> "2004-04-12T13:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.w3.org/2000/01/rdf-schema#comment> "The survey that Pep filled out has been verified" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey> <http://www.w3.org/2000/01/rdf-schema#label> "Pep Verified Survey" .
+# 
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "The airline that pep mention in the survey" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
 # 
 # 
 # 

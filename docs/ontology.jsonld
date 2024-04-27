@@ -107,6 +107,21 @@
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date" : [ {
+    "@value" : "2004-03-12T13:20:00"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The aircraft that pep mention in the survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boeing 737 900"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Business_Class",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -210,6 +225,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the city of Pep destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "London"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified",
@@ -388,21 +415,28 @@
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relates a survey to the flight it is about"
+    "@value" : "The name of the city of Pep origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Barcelona"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Related to the date on which the flight occurred."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@value" : "has flight date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
@@ -485,25 +519,22 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value",
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A class has a string text value"
+    "@value" : "Relates to the date that the survey was submited"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has text value"
+    "@value" : "has survey date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about",
@@ -551,66 +582,6 @@
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value" : [ {
-    "@value" : "Boeing 737 900"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The aircraft that pep mention in the survey"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pep Aircraft"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value" : [ {
-    "@value" : "Ryanair"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The airline that pep mention in the survey"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pep Airline"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value" : [ {
-    "@value" : "London"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The name of the city of Pep destination"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pep Destination"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value" : [ {
-    "@value" : "Barcelona"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The name of the city of Pep origin"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pep Origin"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_rating_value" : [ {
@@ -618,15 +589,15 @@
     "@value" : "9"
   } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona"
   }, {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type"
+  }, {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair"
   } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep"
@@ -643,26 +614,26 @@
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2004-04-12T13:20:00"
-  } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_text" : [ {
     "@value" : "The flight was comfortable and the staff was friendly. The food was delicious and the entertainment options were great. The wifi worked well and the overall experience was positive."
   } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title" : [ {
     "@value" : "Has been a good experience"
   } ],
+  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2004-04-12T13:20:00"
+  } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona"
   }, {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type"
+  }, {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair"
   } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep"
@@ -682,24 +653,29 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Economy_Class"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of seat that Pep had in the flight"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pep Seat Type"
-  }, {
-    "@value" : "The type of seat that Pep had in the flight"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2004-04-12T13:20:00"
+  } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about" : [ {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London"
   }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination"
-  }, {
-    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin"
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona"
   }, {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type"
+  }, {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair"
   } ],
   "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by" : [ {
     "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep"
@@ -712,6 +688,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pep Verified Survey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The airline that pep mention in the survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ryanair"
   } ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",

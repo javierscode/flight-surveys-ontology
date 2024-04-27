@@ -40,15 +40,12 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date
-:has_date rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdf:type owl:FunctionalProperty ;
-          rdfs:domain :Flight_Information ,
-                      :Survey_Information ;
-          rdfs:range xsd:dateTime ;
-          rdfs:comment "Relates a survey to the flight it is about" ;
-          rdfs:label "has date" .
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date
+:has_flight_date rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Flight_Information ;
+                 rdfs:comment "Related to the date on which the flight occurred." ;
+                 rdfs:label "has flight date" .
 
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_country
@@ -109,16 +106,14 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
                   rdfs:label "has review title" .
 
 
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value
-:has_text_value rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Aircraft ,
-                            :Airline ,
-                            :Destination ,
-                            :Origin ;
-                rdfs:range xsd:string ;
-                rdfs:comment "A class has a string text value" ;
-                rdfs:label "has text value" .
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_survey_date
+:has_survey_date rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Survey_Information ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "Relates to the date that the survey was submited" ;
+                 rdfs:label "has survey date" .
 
 
 #################################################################
@@ -309,6 +304,28 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900
+:Boeing_737_900 rdf:type owl:NamedIndividual ,
+                         :Aircraft ;
+                :has_flight_date "2004-03-12T13:20:00" ;
+                rdfs:comment "The aircraft that pep mention in the survey" ;
+                rdfs:label "Boeing 737 900" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#London
+:London rdf:type owl:NamedIndividual ,
+                 :Destination ;
+        rdfs:comment "The name of the city of Pep destination" ;
+        rdfs:label "London" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#barcelona
+:barcelona rdf:type owl:NamedIndividual ,
+                    :Origin ;
+           rdfs:comment "The name of the city of Pep origin" ;
+           rdfs:label "Barcelona" .
+
+
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep
 :pep rdf:type owl:NamedIndividual ,
               :Passenger ;
@@ -316,46 +333,14 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
      :has_passenger_name "Pep Garcia" .
 
 
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft
-:pep_aircraft rdf:type owl:NamedIndividual ,
-                       :Aircraft ;
-              :has_text_value "Boeing 737 900" ;
-              rdfs:comment "The aircraft that pep mention in the survey" ;
-              rdfs:label "Pep Aircraft" .
-
-
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline
-:pep_airline rdf:type owl:NamedIndividual ,
-                      :Airline ;
-             :has_text_value "Ryanair" ;
-             rdfs:comment "The airline that pep mention in the survey" ;
-             rdfs:label "Pep Airline" .
-
-
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination
-:pep_destination rdf:type owl:NamedIndividual ,
-                          :Destination ;
-                 :has_text_value "London" ;
-                 rdfs:comment "The name of the city of Pep destination" ;
-                 rdfs:label "Pep Destination" .
-
-
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin
-:pep_origin rdf:type owl:NamedIndividual ,
-                     :Origin ;
-            :has_text_value "Barcelona" ;
-            rdfs:comment "The name of the city of Pep origin" ;
-            rdfs:label "Pep Origin" .
-
-
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating
 :pep_rating rdf:type owl:NamedIndividual ,
                      :Overall_Experience ;
-            :is_about :pep_aircraft ,
-                      :pep_airline ,
-                      :pep_destination ,
-                      :pep_origin ,
-                      :pep_seat_type ;
+            :is_about :Boeing_737_900 ,
+                      :London ,
+                      :barcelona ,
+                      :pep_seat_type ,
+                      :ryanair ;
             :is_reviewed_by :pep ;
             :has_rating_value 9 ;
             rdfs:comment "The rating that Pep gave to the overall experience" ;
@@ -365,15 +350,15 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review
 :pep_review rdf:type owl:NamedIndividual ,
                      :Review ;
-            :is_about :pep_aircraft ,
-                      :pep_airline ,
-                      :pep_destination ,
-                      :pep_origin ,
-                      :pep_seat_type ;
+            :is_about :Boeing_737_900 ,
+                      :London ,
+                      :barcelona ,
+                      :pep_seat_type ,
+                      :ryanair ;
             :is_reviewed_by :pep ;
-            :has_date "2004-04-12T13:20:00"^^xsd:dateTime ;
             :has_review_text "The flight was comfortable and the staff was friendly. The food was delicious and the entertainment options were great. The wifi worked well and the overall experience was positive." ;
             :has_review_title "Has been a good experience" ;
+            :has_survey_date "2004-04-12T13:20:00"^^xsd:dateTime ;
             rdfs:comment "The story of Pep's experience" ;
             rdfs:label "Pep Review" .
 
@@ -381,21 +366,29 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type
 :pep_seat_type rdf:type owl:NamedIndividual ,
                         :Economy_Class ;
-               rdfs:label "Pep Seat Type" ,
-                          "The type of seat that Pep had in the flight" .
+               rdfs:comment "The type of seat that Pep had in the flight" ;
+               rdfs:label "Pep Seat Type" .
 
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey
 :pep_verifed_survey rdf:type owl:NamedIndividual ,
                              :Verified ;
-                    :is_about :pep_aircraft ,
-                              :pep_airline ,
-                              :pep_destination ,
-                              :pep_origin ,
-                              :pep_seat_type ;
+                    :is_about :Boeing_737_900 ,
+                              :London ,
+                              :barcelona ,
+                              :pep_seat_type ,
+                              :ryanair ;
                     :is_reviewed_by :pep ;
+                    :has_survey_date "2004-04-12T13:20:00"^^xsd:dateTime ;
                     rdfs:comment "The survey that Pep filled out has been verified" ;
                     rdfs:label "Pep Verified Survey" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#ryanair
+:ryanair rdf:type owl:NamedIndividual ,
+                  :Airline ;
+         rdfs:comment "The airline that pep mention in the survey" ;
+         rdfs:label "Ryanair" .
 
 
 #################################################################
