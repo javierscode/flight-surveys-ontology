@@ -15,7 +15,8 @@
 #################################################################
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about
-:is_about rdf:type owl:ObjectProperty ;
+:is_about rdf:type owl:ObjectProperty ,
+                   owl:SymmetricProperty ;
           rdfs:domain :Survey_Information ;
           rdfs:range :Flight_Information ;
           rdfs:comment "Relates a survey to the flight it is about" ;
@@ -25,6 +26,7 @@
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by
 :is_reviewed_by rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:SymmetricProperty ;
                 rdfs:domain :Survey_Information ;
                 rdfs:range :Passenger ;
                 rdfs:comment "Relates a survey to the passenger who reviewed it" ;
@@ -44,6 +46,7 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 :has_flight_date rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :Flight_Information ;
+                 rdfs:range xsd:dateTime ;
                  rdfs:comment "Related to the date on which the flight occurred." ;
                  rdfs:label "has flight date" .
 
@@ -62,8 +65,8 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
                              owl:FunctionalProperty ;
                     rdfs:domain :Passenger ;
                     rdfs:range xsd:string ;
-                    rdfs:label "Specifies the name of the passenger" ,
-                               "has passenger name" .
+                    rdfs:comment "Specifies the name of the passenger" ;
+                    rdfs:label "has passenger name" .
 
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_rating_value
@@ -182,11 +185,11 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
                     rdfs:label "Flight Information" .
 
 
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages
-:Food_And_Beverages rdf:type owl:Class ;
-                    rdfs:subClassOf :Specific_Experience ;
-                    rdfs:comment "The food and beverages rating of the survey" ;
-                    rdfs:label "Food And Beverages" .
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages
+:Food_Beverages rdf:type owl:Class ;
+                rdfs:subClassOf :Specific_Experience ;
+                rdfs:comment "The food and beverages rating of the survey" ;
+                rdfs:label "Food And Beverages" .
 
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Ground_Service
@@ -200,8 +203,8 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 :Not_Verified rdf:type owl:Class ;
               rdfs:subClassOf :Verification ;
               owl:disjointWith :Verified ;
-              rdfs:label "Not Verified" ,
-                         "Whether the survey is not verified" .
+              rdfs:comment "Whether the survey is not verified" ;
+              rdfs:label "Not Verified" .
 
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin
@@ -293,11 +296,11 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
           rdfs:label "Verified" .
 
 
-###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity
-:Wifi_And_Connectivity rdf:type owl:Class ;
-                       rdfs:subClassOf :Specific_Experience ;
-                       rdfs:comment "The wifi and connectivity rating of the survey" ;
-                       rdfs:label "Wifi And Connectivity" .
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity
+:Wifi_Connectivity rdf:type owl:Class ;
+                   rdfs:subClassOf :Specific_Experience ;
+                   rdfs:comment "The wifi and connectivity rating of the survey" ;
+                   rdfs:label "Wifi And Connectivity" .
 
 
 #################################################################
@@ -307,7 +310,7 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900
 :Boeing_737_900 rdf:type owl:NamedIndividual ,
                          :Aircraft ;
-                :has_flight_date "2004-03-12T13:20:00" ;
+                :has_flight_date "2004-03-12T13:20:00"^^xsd:dateTime ;
                 rdfs:comment "The aircraft that pep mention in the survey" ;
                 rdfs:label "Boeing 737 900" .
 
@@ -407,11 +410,11 @@ owl:topObjectProperty rdfs:domain :Survey_Information ;
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Cabin_Staff_Service
                 :Entertainment
-                :Food_And_Beverages
+                :Food_Beverages
                 :Ground_Service
                 :Seat_Comfort
                 :Value_For_Money
-                :Wifi_And_Connectivity
+                :Wifi_Connectivity
               )
 ] .
 

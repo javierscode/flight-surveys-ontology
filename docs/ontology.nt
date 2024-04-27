@@ -12,6 +12,7 @@
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a survey to the flight it is about" .
@@ -20,6 +21,7 @@
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a survey to the passenger who reviewed it" .
@@ -42,6 +44,7 @@
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Related to the date on which the flight occurred." .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> <http://www.w3.org/2000/01/rdf-schema#label> "has flight date" .
 # 
@@ -58,7 +61,7 @@
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/2000/01/rdf-schema#label> "Specifies the name of the passenger" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the name of the passenger" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name> <http://www.w3.org/2000/01/rdf-schema#label> "has passenger name" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_rating_value
@@ -175,11 +178,11 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the flight" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Information" .
 # 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages> <http://www.w3.org/2000/01/rdf-schema#comment> "The food and beverages rating of the survey" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages> <http://www.w3.org/2000/01/rdf-schema#label> "Food And Beverages" .
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages> <http://www.w3.org/2000/01/rdf-schema#comment> "The food and beverages rating of the survey" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages> <http://www.w3.org/2000/01/rdf-schema#label> "Food And Beverages" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Ground_Service
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Ground_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -191,8 +194,8 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verification> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verified> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the survey is not verified" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/2000/01/rdf-schema#label> "Not Verified" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified> <http://www.w3.org/2000/01/rdf-schema#label> "Whether the survey is not verified" .
 # 
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -270,11 +273,11 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verified> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the survey is verified" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verified> <http://www.w3.org/2000/01/rdf-schema#label> "Verified" .
 # 
-# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The wifi and connectivity rating of the survey" .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi And Connectivity" .
+# http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience> .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The wifi and connectivity rating of the survey" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi And Connectivity" .
 # 
 # 
 # 
@@ -288,7 +291,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft> .
-<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> "2004-03-12T13:20:00" .
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_flight_date> "2004-03-12T13:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/2000/01/rdf-schema#comment> "The aircraft that pep mention in the survey" .
 <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Boeing_737_900> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing 737 900" .
 # 
@@ -396,7 +399,7 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_Connectivity> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Value_For_Money> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -404,7 +407,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanti
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Ground_Service> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_Beverages> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Entertainment> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
