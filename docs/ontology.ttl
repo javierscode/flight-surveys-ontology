@@ -15,8 +15,7 @@
 #################################################################
 
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about
-:is_about rdf:type owl:ObjectProperty ,
-                   owl:SymmetricProperty ;
+:is_about rdf:type owl:ObjectProperty ;
           rdfs:domain :Survey_Information ;
           rdfs:range :Flight_Information ;
           rdfs:comment "Relates a survey to the flight it is about" ;
@@ -26,7 +25,6 @@
 ###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by
 :is_reviewed_by rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
-                rdf:type owl:SymmetricProperty ;
                 rdfs:domain :Survey_Information ;
                 rdfs:range :Passenger ;
                 rdfs:comment "Relates a survey to the passenger who reviewed it" ;

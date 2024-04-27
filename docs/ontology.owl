@@ -30,7 +30,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information"/>
         <rdfs:comment>Relates a survey to the flight it is about</rdfs:comment>
@@ -44,7 +43,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger"/>
         <rdfs:comment>Relates a survey to the passenger who reviewed it</rdfs:comment>
