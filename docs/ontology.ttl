@@ -1,0 +1,426 @@
+@prefix : <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#> .
+
+<http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys> rdf:type owl:Ontology ;
+                                                                    rdfs:comment "Odontology aimed at grouping knowledge from flight satisfaction surveys." ;
+                                                                    rdfs:label "Flight survey ontology" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about
+:is_about rdf:type owl:ObjectProperty ;
+          rdfs:domain :Survey_Information ;
+          rdfs:range :Flight_Information ;
+          rdfs:comment "Relates a survey to the flight it is about" ;
+          rdfs:label "is about" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by
+:is_reviewed_by rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Survey_Information ;
+                rdfs:range :Passenger ;
+                rdfs:comment "Relates a survey to the passenger who reviewed it" ;
+                rdfs:label "is reviewed by" .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain :Survey_Information ;
+                      rdfs:range :Passenger .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_date
+:has_date rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Flight_Information ,
+                      :Survey_Information ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "Relates a survey to the flight it is about" ;
+          rdfs:label "has date" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_country
+:has_passenger_country rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain :Passenger ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Specifies the country of the passenger" ;
+                       rdfs:label "has passenger country" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_passenger_name
+:has_passenger_name rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Passenger ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "Specifies the name of the passenger" ,
+                               "has passenger name" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_rating_value
+:has_rating_value rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Rating ;
+                  rdfs:range [ rdf:type rdfs:Datatype ;
+                               owl:onDatatype xsd:integer ;
+                               owl:withRestrictions ( [ xsd:minInclusive 0
+                                                      ]
+                                                      [ xsd:maxInclusive 10
+                                                      ]
+                                                    )
+                             ] ;
+                  rdfs:comment "Specifies the value of the rating" ;
+                  rdfs:label "has rating value" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_text
+:has_review_text rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Review ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Specifies the text of the review" ;
+                 rdfs:label "has review text" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title
+:has_review_title rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Review ;
+                  rdfs:range [ rdf:type rdfs:Datatype ;
+                               owl:onDatatype xsd:string ;
+                               owl:withRestrictions ( [ xsd:maxLength "60"
+                                                      ]
+                                                    )
+                             ] ;
+                  rdfs:comment "Specifies the title of the review" ;
+                  rdfs:label "has review title" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_text_value
+:has_text_value rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Aircraft ,
+                            :Airline ,
+                            :Destination ,
+                            :Origin ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A class has a string text value" ;
+                rdfs:label "has text value" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:subClassOf :Flight_Information ;
+          rdfs:comment "The aircraft of the flight" ;
+          rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:subClassOf :Flight_Information ;
+         rdfs:comment "The airline of the flight" ;
+         rdfs:label "Airline" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Business_Class
+:Business_Class rdf:type owl:Class ;
+                rdfs:subClassOf :Seat_Type ;
+                rdfs:comment "The business class seat type of the flight" ;
+                rdfs:label "Business Class" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Cabin_Staff_Service
+:Cabin_Staff_Service rdf:type owl:Class ;
+                     rdfs:subClassOf :Specific_Experience ;
+                     rdfs:comment "The cabin staff service rating of the survey" ;
+                     rdfs:label "Cabin Staff Service" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Destination
+:Destination rdf:type owl:Class ;
+             rdfs:subClassOf :Flight_Information ;
+             rdfs:comment "The destination of the flight" ;
+             rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Economy_Class
+:Economy_Class rdf:type owl:Class ;
+               rdfs:subClassOf :Seat_Type ;
+               rdfs:comment "The economy class seat type of the flight" ;
+               rdfs:label "Economy Class" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Entertainment
+:Entertainment rdf:type owl:Class ;
+               rdfs:subClassOf :Specific_Experience ;
+               rdfs:comment "The entertainment rating of the survey" ;
+               rdfs:label "Entertainment" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#First_Class
+:First_Class rdf:type owl:Class ;
+             rdfs:subClassOf :Seat_Type ;
+             rdfs:comment "The first class seat type of the flight" ;
+             rdfs:label "First Class" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Flight_Information
+:Flight_Information rdf:type owl:Class ;
+                    rdfs:comment "Information about the flight" ;
+                    rdfs:label "Flight Information" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Food_And_Beverages
+:Food_And_Beverages rdf:type owl:Class ;
+                    rdfs:subClassOf :Specific_Experience ;
+                    rdfs:comment "The food and beverages rating of the survey" ;
+                    rdfs:label "Food And Beverages" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Ground_Service
+:Ground_Service rdf:type owl:Class ;
+                rdfs:subClassOf :Specific_Experience ;
+                rdfs:comment "The ground service rating of the survey" ;
+                rdfs:label "Ground Service" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Not_Verified
+:Not_Verified rdf:type owl:Class ;
+              rdfs:subClassOf :Verification ;
+              owl:disjointWith :Verified ;
+              rdfs:label "Not Verified" ,
+                         "Whether the survey is not verified" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Origin
+:Origin rdf:type owl:Class ;
+        rdfs:subClassOf :Flight_Information ;
+        rdfs:comment "The origin of the flight" ;
+        rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Overall_Experience
+:Overall_Experience rdf:type owl:Class ;
+                    rdfs:subClassOf :Rating ;
+                    rdfs:comment "The overall experience rating of the survey" ;
+                    rdfs:label "Overall Experience" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "Information about the passenger" ;
+           rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Premium_Economy_Class
+:Premium_Economy_Class rdf:type owl:Class ;
+                       rdfs:subClassOf :Seat_Type ;
+                       rdfs:comment "The premium economy class seat type of the flight" ;
+                       rdfs:label "Premium Economy Class" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :Survey_Information ;
+        rdfs:comment "Information about the rating of the survey" ;
+        rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf :Survey_Information ;
+        rdfs:comment "Review of the survey" ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Seat_Comfort
+:Seat_Comfort rdf:type owl:Class ;
+              rdfs:subClassOf :Specific_Experience ;
+              rdfs:comment "The seat comfort rating of the survey" ;
+              rdfs:label "Seat Comfort" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Seat_Type
+:Seat_Type rdf:type owl:Class ;
+           rdfs:subClassOf :Flight_Information ;
+           rdfs:comment "The seat type of the flight" ;
+           rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Specific_Experience
+:Specific_Experience rdf:type owl:Class ;
+                     rdfs:subClassOf :Rating ;
+                     rdfs:comment "The specific experience rating of the survey" ;
+                     rdfs:label "Specific Experience" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Survey_Information
+:Survey_Information rdf:type owl:Class ;
+                    rdfs:comment "Information about the survey" ;
+                    rdfs:label "Survey Information" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Value_For_Money
+:Value_For_Money rdf:type owl:Class ;
+                 rdfs:subClassOf :Specific_Experience ;
+                 rdfs:comment "The value for money rating of the survey" ;
+                 rdfs:label "Value For Money" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verification
+:Verification rdf:type owl:Class ;
+              rdfs:subClassOf :Survey_Information ;
+              rdfs:comment "Information about the verification of the survey" ;
+              rdfs:label "Verification" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Verified
+:Verified rdf:type owl:Class ;
+          rdfs:subClassOf :Verification ;
+          rdfs:comment "Whether the survey is verified" ;
+          rdfs:label "Verified" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#Wifi_And_Connectivity
+:Wifi_And_Connectivity rdf:type owl:Class ;
+                       rdfs:subClassOf :Specific_Experience ;
+                       rdfs:comment "The wifi and connectivity rating of the survey" ;
+                       rdfs:label "Wifi And Connectivity" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep
+:pep rdf:type owl:NamedIndividual ,
+              :Passenger ;
+     :has_passenger_country "Spain" ;
+     :has_passenger_name "Pep Garcia" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_aircraft
+:pep_aircraft rdf:type owl:NamedIndividual ,
+                       :Aircraft ;
+              :has_text_value "Boeing 737 900" ;
+              rdfs:comment "The aircraft that pep mention in the survey" ;
+              rdfs:label "Pep Aircraft" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_airline
+:pep_airline rdf:type owl:NamedIndividual ,
+                      :Airline ;
+             :has_text_value "Ryanair" ;
+             rdfs:comment "The airline that pep mention in the survey" ;
+             rdfs:label "Pep Airline" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_destination
+:pep_destination rdf:type owl:NamedIndividual ,
+                          :Destination ;
+                 :has_text_value "London" ;
+                 rdfs:comment "The name of the city of Pep destination" ;
+                 rdfs:label "Pep Destination" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_origin
+:pep_origin rdf:type owl:NamedIndividual ,
+                     :Origin ;
+            :has_text_value "Barcelona" ;
+            rdfs:comment "The name of the city of Pep origin" ;
+            rdfs:label "Pep Origin" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_rating
+:pep_rating rdf:type owl:NamedIndividual ,
+                     :Overall_Experience ;
+            :is_about :pep_aircraft ,
+                      :pep_airline ,
+                      :pep_destination ,
+                      :pep_origin ,
+                      :pep_seat_type ;
+            :is_reviewed_by :pep ;
+            :has_rating_value 9 ;
+            rdfs:comment "The rating that Pep gave to the overall experience" ;
+            rdfs:label "Overall Pep Experience" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_review
+:pep_review rdf:type owl:NamedIndividual ,
+                     :Review ;
+            :is_about :pep_aircraft ,
+                      :pep_airline ,
+                      :pep_destination ,
+                      :pep_origin ,
+                      :pep_seat_type ;
+            :is_reviewed_by :pep ;
+            :has_date "2004-04-12T13:20:00"^^xsd:dateTime ;
+            :has_review_text "The flight was comfortable and the staff was friendly. The food was delicious and the entertainment options were great. The wifi worked well and the overall experience was positive." ;
+            :has_review_title "Has been a good experience" ;
+            rdfs:comment "The story of Pep's experience" ;
+            rdfs:label "Pep Review" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_seat_type
+:pep_seat_type rdf:type owl:NamedIndividual ,
+                        :Economy_Class ;
+               rdfs:label "Pep Seat Type" ,
+                          "The type of seat that Pep had in the flight" .
+
+
+###  http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#pep_verifed_survey
+:pep_verifed_survey rdf:type owl:NamedIndividual ,
+                             :Verified ;
+                    :is_about :pep_aircraft ,
+                              :pep_airline ,
+                              :pep_destination ,
+                              :pep_origin ,
+                              :pep_seat_type ;
+                    :is_reviewed_by :pep ;
+                    rdfs:comment "The survey that Pep filled out has been verified" ;
+                    rdfs:label "Pep Verified Survey" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Business_Class
+                :Economy_Class
+                :First_Class
+                :Premium_Economy_Class
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cabin_Staff_Service
+                :Entertainment
+                :Food_And_Beverages
+                :Ground_Service
+                :Seat_Comfort
+                :Value_For_Money
+                :Wifi_And_Connectivity
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
