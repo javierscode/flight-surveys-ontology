@@ -947,7 +947,7 @@
     "comment" : {
       "undefined" : "Specifies the country of the passenger"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "48"
   }, {
     "iri" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_text",
@@ -961,7 +961,7 @@
     "comment" : {
       "undefined" : "Specifies the text of the review"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "49"
   }, {
     "range" : "12",
@@ -1000,7 +1000,7 @@
     "comment" : {
       "undefined" : "Relates to the date that the survey was submited"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "60"
   }, {
     "range" : "4",
@@ -1040,7 +1040,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "70",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "69"
   }, {
     "range" : "1",
@@ -1064,7 +1064,7 @@
     "comment" : {
       "undefined" : "Relates a survey to the flight it is about"
     },
-    "attributes" : [ "object" ],
+    "attributes" : [ "object", "asymmetric" ],
     "id" : "76"
   }, {
     "iri" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by",
@@ -1079,7 +1079,7 @@
     "comment" : {
       "undefined" : "Relates a survey to the passenger who reviewed it"
     },
-    "attributes" : [ "object" ],
+    "attributes" : [ "object", "asymmetric" ],
     "id" : "10"
   }, {
     "iri" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#has_review_title",
@@ -1093,7 +1093,7 @@
     "comment" : {
       "undefined" : "Specifies the title of the review"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "77"
   }, {
     "range" : "2",
@@ -1182,7 +1182,7 @@
     "comment" : {
       "undefined" : "Specifies the value of the rating"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "93"
   }, {
     "range" : "57",
@@ -1206,7 +1206,7 @@
     "comment" : {
       "undefined" : "Specifies the name of the passenger"
     },
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "96"
   } ]
 }

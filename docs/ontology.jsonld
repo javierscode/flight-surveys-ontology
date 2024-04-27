@@ -544,7 +544,7 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_about",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relates a survey to the flight it is about"
   } ],
@@ -559,7 +559,7 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/javi/ontologies/2024/3/flight-surveys#is_reviewed_by",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relates a survey to the passenger who reviewed it"
   } ],
